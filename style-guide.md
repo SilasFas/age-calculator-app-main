@@ -16,8 +16,8 @@ The designs were created to the following widths:
 
 ### Neutral
 
-- White: hsl(0, 0%, 100%)
-- Off white: hsl(0, 0%, 94%)
+<!-- - White: hsl(0, 0%, 100%) -->
+<!-- - Off white: hsl(0, 0%, 94%) -->
 - Light grey: hsl(0, 0%, 86%)
 - Smokey grey: hsl(0, 1%, 44%)
 - Off black: hsl(0, 0%, 8%)

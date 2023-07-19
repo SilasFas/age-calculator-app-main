@@ -4,47 +4,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-
   <link rel="stylesheet" href="Styles/Mobile_first.css">
-
   <title>Frontend Mentor | Age calculator app</title>
-
 </head>
 
 <body>
   <main>
-    <section id="test">
+    <form>
+      <section id="inputSection">
+        <span>
+          <label for="day">DAY</label> <br>
+          <input type="number" name="day" id="day" placeholder="DD">
+        </span>
 
-      <span>
-        <p>DAY</p>
-        <input type="number" name="day" id="day" placeholder="DD">
-      </span>
+        <span>
+          <label for="month">MONTH</label> <br>
+          <input type="number" name="month" id="month" placeholder="MM">
+        </span>
 
-      <span>
-        <p>MONTH</p>
-        <input type="number" name="month" id="month" placeholder="MM">
-      </span>
-
-      <span>
-        <p>YEAR</p>
-        <input type="number" name="year" id="year" placeholder="YYYY">
-      </span>
-
-      <button><img src="assets/images/icon-arrow.svg" alt="button"></button>
-    </section>
-
-    <section>
+        <span>
+          <label for="year">YEAR</label> <br>
+          <input type="number" name="year" id="year" placeholder="YYYY">
+        </span>
+      </section>
+      <button type="button"><img src="assets/images/icon-arrow.svg" alt="button"></button>
+    </form>
+    <section id="outputSection">
       <p><span>--</span> years</p>
       <p><span>--</span> months</p>
       <p><span>--</span> days</p>
     </section>
   </main>
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
 </body>
 
 </html>

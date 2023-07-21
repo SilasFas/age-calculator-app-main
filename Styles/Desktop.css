@@ -1,0 +1,55 @@
+@media only screen and (min-width: 410px) {
+    main {
+        width: 500px;
+        padding: 45px;
+        margin: 45px;
+        border-bottom-right-radius: 125px;
+    }
+
+    #inputSection {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    input {
+        border: 1px solid hsl(0, 0%, 86%);
+        width: 85px;
+        font-size: 20px;
+        border-radius: 10px;
+        margin-right: 20px;
+    }
+
+    #btnSection {
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+    }
+
+    #btnSection::before {
+        content: '';
+        position: absolute;
+        margin: auto;
+        height: 1.3px;
+        background-color: hsl(0, 0%, 86%);
+        width: 76%;
+        top: 50%;
+    }
+
+    #btnSection::before {
+        left: 0;
+    }
+
+    button {
+        margin-top: 1px;
+        margin-bottom: 1px;
+    }
+
+    p {
+        font-size: 65px;
+        line-height: 65px;
+    }
+
+    .result {
+        font-size: 65px;
+    }
+}

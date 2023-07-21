@@ -2,9 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
 
-/* font-family: 'Poppins', sans-serif; */
-/* - Weights: 400i, 700, 800i */
-
 * {
     margin: 0px;
     padding: 0px;
@@ -101,10 +98,10 @@ img {
 }
 
 p {
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 800;
     font-style: italic;
-    line-height: 40px;
+    line-height: 50px;
 }
 
 .result {

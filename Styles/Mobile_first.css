@@ -55,6 +55,29 @@ input {
 #btnSection {
     display: flex;
     justify-content: center;
+
+
+    position: relative;
+}
+
+#btnSection::before,
+#btnSection::after {
+    content: '';
+    position: absolute;
+    margin: auto;
+    height: 1.3px;
+    background-color: hsl(0, 0%, 86%);
+    width: 40%;
+    top: 50%;
+
+}
+
+#btnSection::after {
+    left: 0;
+}
+
+#btnSection::before {
+    right: 0;
 }
 
 button {

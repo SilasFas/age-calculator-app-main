@@ -17,22 +17,22 @@
       <section id="inputSection">
         <span>
           <label for="day">DAY</label> <br>
-          <input type="number" name="day" id="day" placeholder="DD">
+          <input type="number" name="day" id="day" placeholder="DD" min="1">
         </span>
 
         <span>
           <label for="month">MONTH</label> <br>
-          <input type="number" name="month" id="month" placeholder="MM">
+          <input type="number" name="month" id="month" placeholder="MM" min="1" max="12">
         </span>
 
         <span>
           <label for="year">YEAR</label> <br>
-          <input type="number" name="year" id="year" placeholder="YYYY">
+          <input type="number" name="year" id="year" placeholder="YYYY" min="1">
         </span>
       </section>
 
       <section id="btnSection">
-        <button type="button"><img src="assets/images/icon-arrow.svg" alt="button"></button>
+        <button type="button" id="button"><img src="assets/images/icon-arrow.svg" alt="button"></button>
       </section>
 
     </form>

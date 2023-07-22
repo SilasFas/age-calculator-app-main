@@ -25,6 +25,33 @@ const yearsResult = window.document.getElementById('yearsResult')
 const monthsResult = window.document.getElementById('monthsResult')
 const daysResult = window.document.getElementById('daysResult')
 
+day.addEventListener('click', (() => {
+    dayRequired.style.display = 'none'
+    day.style.borderColor = 'hsl(259, 100%, 65%)'
+    dayLabel.style.color = 'hsl(0, 1%, 44%)'
+    valid_day.style.display = 'none'
+    day.value = ''
+    validDate.style.display = 'none'
+}))
+
+month.addEventListener('click', (() => {
+    monthRequired.style.display = 'none'
+    month.style.borderColor = 'hsl(259, 100%, 65%)'
+    monthLabel.style.color = 'hsl(0, 1%, 44%)'
+    valid_month.style.display = 'none'
+    month.value = ''
+    validDate.style.display = 'none'
+}))
+
+year.addEventListener('click', (() => {
+    yearRequired.style.display = 'none'
+    year.style.borderColor = 'hsl(259, 100%, 65%)'
+    yearLabel.style.color = 'hsl(0, 1%, 44%)'
+    valid_year.style.display = 'none'
+    year.value = ''
+    validDate.style.display = 'none'
+}))
+
 button.addEventListener('click', (() => {
     const currentDate = new Date()
     let currentYear = currentDate.getFullYear()

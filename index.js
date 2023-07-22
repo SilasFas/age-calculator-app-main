@@ -18,6 +18,8 @@ const valid_day = window.document.getElementById('valid_day')
 const valid_month = window.document.getElementById('valid_month')
 const valid_year = window.document.getElementById('valid_year')
 
+const validDate = window.document.getElementById('validDate')
+
 // Result
 const yearsResult = window.document.getElementById('yearsResult')
 const monthsResult = window.document.getElementById('monthsResult')
@@ -27,7 +29,18 @@ button.addEventListener('click', (() => {
     const currentDate = new Date()
     let currentYear = currentDate.getFullYear()
 
-    if (day.value == '') {
+    if (day.value == '' & month.value == '' & year.value == '') {
+        dayRequired.style.display = 'block'
+        monthRequired.style.display = 'block'
+        yearRequired.style.display = 'block'
+        day.style.borderColor = 'rgba(255, 0, 0, 0.411)'
+        dayLabel.style.color = 'rgba(134, 1, 1, 0.562)'
+        month.style.borderColor = 'rgba(255, 0, 0, 0.411)'
+        monthLabel.style.color = 'rgba(134, 1, 1, 0.562)'
+        year.style.borderColor = 'rgba(255, 0, 0, 0.411)'
+        yearLabel.style.color = 'rgba(134, 1, 1, 0.562)'
+    }
+    else if (day.value == '') {
         dayRequired.style.display = 'block'
         day.style.borderColor = 'rgba(255, 0, 0, 0.411)'
         dayLabel.style.color = 'rgba(134, 1, 1, 0.562)'
@@ -64,15 +77,34 @@ button.addEventListener('click', (() => {
 
         let userBirthDate = new Date(yearNumber, monthNumber - 1, dayNumber);
 
-        let ageInMilliseconds = currentDate - userBirthDate
-        const ageDate = new Date(ageInMilliseconds)
+        function isValidDate(day, month, year) {
+            const date = new Date(year, month - 1, day);
+            return (
+                date.getDate() === day &&
+                date.getMonth() === month - 1 &&
+                date.getFullYear() === year
+            );
+        }
 
-        const years = ageDate.getUTCFullYear() - 1970
-        const months = ageDate.getUTCMonth();
-        const days = ageDate.getUTCDate() - 1;
+        if (isValidDate(dayNumber, monthNumber, yearNumber)) {
+            let ageInMilliseconds = currentDate - userBirthDate
+            const ageDate = new Date(ageInMilliseconds)
 
-        yearsResult.innerText = years
-        monthsResult.innerText = months
-        daysResult.innerText = days
+            const years = ageDate.getUTCFullYear() - 1970
+            const months = ageDate.getUTCMonth();
+            const days = ageDate.getUTCDate() - 1;
+
+            yearsResult.innerText = years
+            monthsResult.innerText = months
+            daysResult.innerText = days
+        } else {
+            validDate.style.display = 'block'
+            day.style.borderColor = 'rgba(255, 0, 0, 0.411)'
+            dayLabel.style.color = 'rgba(134, 1, 1, 0.562)'
+            month.style.borderColor = 'rgba(255, 0, 0, 0.411)'
+            monthLabel.style.color = 'rgba(134, 1, 1, 0.562)'
+            year.style.borderColor = 'rgba(255, 0, 0, 0.411)'
+            yearLabel.style.color = 'rgba(134, 1, 1, 0.562)'
+        }
     }
 }))

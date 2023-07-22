@@ -77,6 +77,7 @@ button.addEventListener('click', (() => {
 
         let userBirthDate = new Date(yearNumber, monthNumber - 1, dayNumber);
 
+        // validates if the date is real or exist
         function isValidDate(day, month, year) {
             const date = new Date(year, month - 1, day);
             return (

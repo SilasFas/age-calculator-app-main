@@ -16,18 +16,30 @@
 
       <section id="inputSection">
         <span>
-          <label for="day">DAY</label> <br>
+          <label id="dayLabel" for="day">DAY</label> <br>
           <input type="number" name="day" id="day" placeholder="DD" min="1">
+          <span id="dayRequired" style="display: none; color: rgba(255, 0, 0, 0.411); font-size: 8px;">This field is
+            required</span>
+          <span id="valid_day" style="display: none; color: rgba(255, 0, 0, 0.411); font-size: 8px;">Must be a valid
+            day</span>
         </span>
 
         <span>
-          <label for="month">MONTH</label> <br>
+          <label id="monthLabel" for="month">MONTH</label> <br>
           <input type="number" name="month" id="month" placeholder="MM" min="1" max="12">
+          <span id="monthRequired" style="display: none; color: rgba(255, 0, 0, 0.411); font-size: 8px;">This field is
+            required</span>
+          <span id="valid_month" style="display: none; color: rgba(255, 0, 0, 0.411); font-size: 8px;">Must be a valid
+            month</span>
         </span>
 
         <span>
-          <label for="year">YEAR</label> <br>
+          <label id="yearLabel" for="year">YEAR</label> <br>
           <input type="number" name="year" id="year" placeholder="YYYY" min="1">
+          <span id="yearRequired" style="display: none; color: rgba(255, 0, 0, 0.411); font-size: 8px;">This field is
+            required</span>
+          <span id="valid_year" style="display: none; color: rgba(255, 0, 0, 0.411); font-size: 8px;">Must be in the
+            past</span>
         </span>
       </section>
 
@@ -37,9 +49,9 @@
 
     </form>
     <section id="outputSection">
-      <p><span class="result">--</span> years</p>
-      <p><span class="result">--</span> months</p>
-      <p><span class="result">--</span> days</p>
+      <p><span class="result" id="yearsResult">--</span> years</p>
+      <p><span class="result" id="monthsResult">--</span> months</p>
+      <p><span class="result" id="daysResult">--</span> days</p>
     </section>
   </main>
   <script src="index.js"></script>
